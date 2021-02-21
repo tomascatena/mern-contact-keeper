@@ -1,6 +1,16 @@
 const express = require('express');
+const connectDB = require('./config/db');
+const colors = require('colors');
+const morgan = require('morgan');
 
 const app = express();
+app.use(morgan('dev'));
+
+// Connect Database
+connectDB();
+
+// Init Middleware
+app.use(express.json({ extended: false }));
 
 app.get('/', (req, res) =>
   res.json({ msg: 'Hole, bienvenido a contact-keeper API' })

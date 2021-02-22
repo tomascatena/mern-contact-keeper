@@ -76,7 +76,7 @@ const ContactForm = () => {
         checked={type === 'personal'}
         onChange={onChange}
       />{' '}
-      <label htmlFor="personal">Personal</label>
+      <label htmlFor="personal">Personal</label>{' '}
       <input
         type="radio"
         name="type"
